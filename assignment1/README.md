@@ -8,23 +8,24 @@ implemented / researched.   SELF
 2. Describe in detail the steps you used to complete the assignment
 
 ### Environment 
-- I created a partition on my Macbook drive and installed Ubuntu 20.04 LTS with a boot drive
+1. I created a partition on my Macbook drive and installed Ubuntu 20.04 LTS with a USB boot drive
+  (https://www.youtube.com/watch?v=kRgKlcm1XPI&t=629s) 
 - The Linux partition has 170GB storage and a 17.7GB SWAP space
-- In terminal, installed all kernel building dependencies and packages
+2. In terminal, installed all kernel building dependencies and packages
 > sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf make gcc
 ### Deployment
-- Downloaded the cmpe283-1.c and Makefile for Intel Processors
-- Ran the make command after adding additional functions and implementations for the 5 MSRs
+3. Downloaded the cmpe283-1.c and Makefile for Intel Processors
+4. Ran the make command after adding additional functions and implementations for the 5 MSRs
 > $ make
-- Executed the command below to inject the code into the kernel
+5. Executed the command below to inject the kernel object into the kernel
 > $ sudo insmod ./cmpe283-1.ko
-- Executed the command below to view the kernel output
+6. Executed the command below to view the kernel output
 > $ dmesg
-- This is the output for the 5 MSRs:
+- This is the output for the 5 MSRs for my Macbook Pro 2014 i7:
 
 ![CMPE281-Lab1Terminal](https://user-images.githubusercontent.com/23691164/115492610-f054c680-a216-11eb-815e-778b318375b1.png)
 
 
-- Executed the command below to unload the module from the kernel
+7. Executed the command below to unload the module from the kernel
 > $ sudo rmmod cmpe283-1
 

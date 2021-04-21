@@ -11,13 +11,13 @@ implemented / researched.   SELF
 - The Linux partition has 170GB storage and a 17.7GB SWAP space
 
 
-- Installed all kernel building dependencies and packages
+- In terminal, installed all kernel building dependencies and packages
 > sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf make gcc
 
 - Downloaded the cmpe283-1.c and Makefile for Intel Processors
-- Ran the make command after adding additional functions 
+- Ran the make command after adding additional functions and implementations for the 5 MSRs
 > $ make
-- Executed the command below to inject and run the kernel code
+- Executed the command below to inject the code into the kernel
 > $ sudo insmod ./cmpe283-1.ko
 - Executed the command below to view the kernel output
 > $ dmesg

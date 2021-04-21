@@ -7,12 +7,16 @@ implemented / researched.   SELF
 
 2. Describe in detail the steps you used to complete the assignment
 
-- I created a partition on my Macbook drive and installed Ubuntu 20.04 LTS on it 
+- I created a partition on my Macbook drive and installed Ubuntu 20.04 LTS with a boot drive
 - The Linux partition has 170GB storage and a 17.7GB SWAP space
-- Install all kernel building dependencies and packages
+
+
+- Installed all kernel building dependencies and packages
 > sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf make gcc
 
 - Downloaded the cmpe283-1.c and Makefile for Intel Processors
+- Ran the make command after adding additional functions 
+> $ make
 - Executed the command below to inject and run the kernel code
 > $ sudo insmod ./cmpe283-1.ko
 - Executed the command below to view the kernel output

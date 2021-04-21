@@ -1,4 +1,4 @@
-# CMPE283
+# Assignment 1
 
 Brandon Ngo 010646012
 

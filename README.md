@@ -1,10 +1,9 @@
 # CMPE283
-
+<pre>
 Brandon Ngo 010646012
 
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented / researched. SELF
-
 
 2. Describe in detail the steps you used to complete the assignment. 
 
@@ -17,3 +16,5 @@ implemented / researched. SELF
 
 
 ![CMPE281-Lab1Terminal](https://user-images.githubusercontent.com/23691164/115492610-f054c680-a216-11eb-815e-778b318375b1.png)
+
+</pre>

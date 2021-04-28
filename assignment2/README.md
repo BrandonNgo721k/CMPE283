@@ -16,19 +16,29 @@ SELF
 
 #### Describe in detail the steps you used to complete the assignment. 
   1. Forked the https://github.com/torvalds/linux repo in personal repo
-  2. Cloned that perosnal linux repo
+  2. Cloned that personal linux repo and checkout the most recent stable version 
+  > git checkout v5.11
   3. Installed the necessary packages to build a kernel later using following command in terminal 
   > sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
-  4. Got kernel version
+  4. Install more packages
+  > apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
+  6. Got kernel version
   > uname -a
-  5.Copied current kernel config into config for new kernel to be built in the linux source code tree
+  7.Copied current kernel config into config for new kernel to be built in the linux source code tree
   > cp /boot/config-<KERNEL VERSION> ./.config
-  6. Made updated configuration for linux source code tree, held down enter to confirm all defaults
+  8. Made updated configuration for linux source code tree, held down enter to confirm all defaults
   > make oldconfig
-  7. Resolve certification error to compile kernel 
+  9. Resolve certification error to compile kernel 
   > sed -ri '/CONFIG_SYSTEM_TRUSTED_KEYS/s/=.+/=""/g' .config 
-  9. Made modules and kernel and install both, replaced X with max number of cpus allocated
+  10. Made modules and kernel and install both, replaced X with max number of cpus allocated
   > make -j <X> modules && make -j <X> && sudo make modules_install && sudo make install
+  11. Verify the new version with "uname -a" and then reboot
+  12. Modify the linux/arch/x86/kvm/cpuid.c 
+    -
+  10. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
+    -
+  11. ReMake the code and reboot
+  12. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?

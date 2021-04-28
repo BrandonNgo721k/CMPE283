@@ -19,7 +19,16 @@ SELF
   2. Cloned that perosnal linux repo
   3. Installed the necessary packages to build a kernel later using following command in terminal 
   > sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
-  4. 
+  4. Got kernel version
+  > uname -a
+  5.Copied current kernel config into config for new kernel to be built in the linux source code tree
+  > cp /boot/config-<KERNEL VERSION> ./.config
+  6. Made updated configuration for linux source code tree, held down enter to confirm all defaults
+  > make oldconfig
+  7. Resolve certification error to compile kernel 
+  > sed -ri '/CONFIG_SYSTEM_TRUSTED_KEYS/s/=.+/=""/g' .config 
+  9. Made modules and kernel and install both, replaced X with max number of cpus allocated
+  > make -j <X> modules && make -j <X> && sudo make modules_install && sudo make install
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?

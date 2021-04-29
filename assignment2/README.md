@@ -24,7 +24,7 @@ SELF
   > apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
   6. Got kernel version
   > uname -a
-  7.Copied current kernel config into config for new kernel to be built in the linux source code tree
+  7. Copied current kernel config into config for new kernel to be built in the linux source code tree
   > cp /boot/config-<KERNEL VERSION> ./.config
   8. Made updated configuration for linux source code tree, held down enter to confirm all defaults
   > make oldconfig

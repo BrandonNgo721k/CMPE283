@@ -34,11 +34,13 @@ SELF
   > make -j <X> modules && make -j <X> && sudo make modules_install && sudo make install
   11. Verify the new version with "uname -a" and then reboot
   12. Modify the linux/arch/x86/kvm/cpuid.c 
-    -
+    - 
   10. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
     -
   11. ReMake the code and reboot
-  12. Tested the code using cpuid -l 0x4FFFFFE
+  12. check virtualization capablity, under "virtualization" should be "VT-x" or VT-d or AMD-V
+  > lscpu
+  14. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?

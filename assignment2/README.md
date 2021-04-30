@@ -55,6 +55,7 @@ SELF
   > sudo apt-get install make
   23. Tested the code using cpuid -l 0x4FFFFFE
   24. compile and run test code
+  -   eax =number of exits :  ebx =total cycle count of hi bit value: ecx =total cycle count of low bit value
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 The number of exits increased but does not seem like it was ... at a stable rate. 

@@ -38,8 +38,8 @@ SELF
   10. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
     - added atomic variables and under the __vmx_handle_exit() add counters and time tracking
   11. Remake the code and reboot
-  12. check virtualization capablity, under "virtualization" should be "VT-x" or VT-d or AMD-V
-  > lscpu
+  12. check virtualization capablity
+  > $(grep -qE 'vmx|svm' /proc/cpuinfo) && echo "Virtualization IS supported" || echo "Virtualization is NOT supported"
   14. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 

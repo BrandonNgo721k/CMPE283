@@ -15,6 +15,7 @@ Modify the CPUID emulation code in KVM to report back additional information whe
 SELF
 
 #### Describe in detail the steps you used to complete the assignment. 
+### Setup
   1. Forked the https://github.com/torvalds/linux repo in personal repo
   2. Cloned that personal linux repo and checkout the most recent stable version 
   > git checkout v5.11
@@ -37,10 +38,11 @@ SELF
     - Under knvm_emulate_cpuid() inserted a condition for eax==0x4FFFFFF and implemented parsing for the reg values to be printed in kernel based on atomic variables
   10. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
     - added atomic variables and under the __vmx_handle_exit() add counters and time tracking
-  11. Remake the code and reboot
+  11. Remake the code using the previous make commands and reboot
   12. check virtualization capablity
   > $(grep -qE 'vmx|svm' /proc/cpuinfo) && echo "Virtualization IS supported" || echo "Virtualization is NOT supported"
-  14. Tested the code using cpuid -l 0x4FFFFFE
+  14. Install KVM
+  15. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?

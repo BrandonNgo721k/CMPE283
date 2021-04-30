@@ -50,4 +50,8 @@ SELF
   17. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
-Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+No, the number of exits increase is not at stable rate. 
+#### Or are there more exits performed during certain VM operations? 
+There may be other exit and operations performed like EPT_VIOLATION, RDRAND, I/O instruction, RDTSCP , MSR_WRITE or page fault.
+#### Approximately how many exits does a full VM boot entail?
+A full boot seems to be around 300,000 exits. 

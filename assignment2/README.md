@@ -41,8 +41,11 @@ SELF
   11. Remake the code using the previous make commands and reboot
   12. check virtualization capablity
   > $(grep -qE 'vmx|svm' /proc/cpuinfo) && echo "Virtualization IS supported" || echo "Virtualization is NOT supported"
-  14. Install KVM
-  15. Tested the code using cpuid -l 0x4FFFFFE
+  14. Install KVM https://help.ubuntu.com/community/KVM/Installation
+  > sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+  15. Installed the virt-manager 
+  > sudo apt-get install virt-manager
+  17. Tested the code using cpuid -l 0x4FFFFFE
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?

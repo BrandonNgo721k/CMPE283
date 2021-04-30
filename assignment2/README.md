@@ -48,7 +48,7 @@ SELF
   > sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
   19. Installed the virt-manager 
   > sudo apt-get install virt-manager
-  20. Create nested VM
+  20. Create nested VM installing ubuntu with the iso
   ![image](https://user-images.githubusercontent.com/23691164/116650943-01988400-a937-11eb-82cd-6ed6bea5c55a.png)
 
   22. install cpuid and make

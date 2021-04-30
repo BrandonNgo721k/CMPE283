@@ -58,8 +58,8 @@ SELF
   -   eax =number of exits :  ebx =total cycle count of hi bit value: ecx =total cycle count of low bit value
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
-The number of exits increased but does not seem like it was ... at a stable rate. 
+The number of exits seem to increase at a stable rate if the test is ran every second we can see 
 ### Or are there more exits performed during certain VM operations? 
-There may be other exit and operations performed like EPT_VIOLATION, RDRAND, I/O instruction, RDTSCP , MSR_WRITE or page fault.
+There may be other exit and operations performed like EPT_VIOLATION, RDRAND, I/O instruction, RDTSCP , MSR_WRITE or page fault. There are more exits performed when other apps or tasks are running as well
 ### Approximately how many exits does a full VM boot entail?
-A full boot seems to be around 800,000 exits. 
+A full boot seems to be around 500,000 exits. 

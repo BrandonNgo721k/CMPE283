@@ -1201,6 +1201,9 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
         ebx = high_32;
         ecx = low_32;
         edx = 0; //nothing specified
+	printk(KERN_INFO "eax exit spent = %llu", eax);
+	printk(KERN_INFO "ebx exit spent = %u", ebx);
+	printk(KERN_INFO "ecx exit spent = %u", ecx);
         printk(KERN_INFO "Total exit time = %llu", total_exit_time);
     }
     else //default function

@@ -52,9 +52,9 @@ SELF
   ![image](https://user-images.githubusercontent.com/23691164/116650943-01988400-a937-11eb-82cd-6ed6bea5c55a.png)
 
   22. install cpuid and make
-  > sudo apt-get install make
-  23. Tested the code using "cpuid -l 0x4FFFFFE" in terminal
-  24. compile and run test code "gcc test.c ./.a.out"
+  > sudo apt-get install make cpuid gcc
+  23. Tested the code using "cpuid -l 0x4FFFFFF" in terminal
+  24. compile and run test code "gcc test.c" "./.a.out"
   -   eax =number of exits :  ebx =total cycle count of hi bit value: ecx =total cycle count of low bit value
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? 

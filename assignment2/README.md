@@ -49,10 +49,12 @@ SELF
   19. Installed the virt-manager 
   > sudo apt-get install virt-manager
   20. Create nested VM
-  21. install cpui and make
+  ![image](https://user-images.githubusercontent.com/23691164/116650943-01988400-a937-11eb-82cd-6ed6bea5c55a.png)
+
+  22. install cpuid and make
   > sudo apt-get install make
-  22. Tested the code using cpuid -l 0x4FFFFFE
-  23. compile and run test code
+  23. Tested the code using cpuid -l 0x4FFFFFE
+  24. compile and run test code
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 No, the number of exits increase is not at stable rate. 

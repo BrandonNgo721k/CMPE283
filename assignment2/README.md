@@ -35,22 +35,24 @@ SELF
   10. Made modules and kernel and install both, replaced X with max number of cpus allocated
   > make -j <X> modules && make -j <X> && sudo make modules_install && sudo make install
   11. Verify the new version with "uname -a" and then reboot
-  12. Modify the linux/arch/x86/kvm/cpuid.c 
+  ### Code
+  13. Modify the linux/arch/x86/kvm/cpuid.c 
     - Under knvm_emulate_cpuid() inserted a condition for eax==0x4FFFFFF and implemented parsing for the reg values to be printed in kernel based on atomic variables
-  10. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
+  14. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
     - added atomic variables and under the __vmx_handle_exit() add counters and time tracking
-  11. Remake the code using the previous make commands and reboot
-  12. check virtualization capablity
+  15. Remake the code using the previous make commands and reboot
+  ### Nested VM
+  17. check virtualization capablity
   > $(grep -qE 'vmx|svm' /proc/cpuinfo) && echo "Virtualization IS supported" || echo "Virtualization is NOT supported"
-  14. Install KVM https://help.ubuntu.com/community/KVM/Installation
+  18. Install KVM https://help.ubuntu.com/community/KVM/Installation
   > sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-  15. Installed the virt-manager 
+  19. Installed the virt-manager 
   > sudo apt-get install virt-manager
-  16. Create nested VM
-  17. install cpui and make
+  20. Create nested VM
+  21. install cpui and make
   > sudo apt-get install make
-  19. Tested the code using cpuid -l 0x4FFFFFE
-  20. compile and run test code
+  22. Tested the code using cpuid -l 0x4FFFFFE
+  23. compile and run test code
 
 #### Comment on the frequency of exits – does the number of exits increase at a stable rate? 
 No, the number of exits increase is not at stable rate. 

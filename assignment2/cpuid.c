@@ -24,6 +24,10 @@
 #include "trace.h"
 #include "pmu.h"
 
+#include <asm/atomic.h>
+#include <asm/atomic64_64.h>
+#include <asm/msr.h>
+
 /*
  * Unlike "struct cpuinfo_x86.x86_capability", kvm_cpu_caps doesn't need to be
  * aligned to sizeof(unsigned long) because it's not accessed via bitops.
@@ -1172,9 +1176,9 @@ bool kvm_cpuid(struct kvm_vcpu *vcpu, u32 *eax, u32 *ebx,
 EXPORT_SYMBOL_GPL(kvm_cpuid);
 
 //syncronize global
-atomic64_t time_processing_exits;     //long value
+atomic64_t time_processing_exits;     
 EXPORT_SYMBOL(time_processing_exits); //make accesible to other modules
-atomic_t exit_counter;                //int value
+atomic_t exit_counter;                
 EXPORT_SYMBOL(exit_counter);
 
 int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
@@ -1193,7 +1197,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
         eax = atomic_read(&exit_counter); //return
         total_exit_time = atomic64_read(&time_processing_exits);
         high_32 = total_exit_time >> 32; //shift for high bits
-        low_32 = (u32)total_exit_time;
+        low_32 = (u32)total_exit_time; //first 32bits (low)
         ebx = high_32;
         ecx = low_32;
         edx = 0; //nothing specified

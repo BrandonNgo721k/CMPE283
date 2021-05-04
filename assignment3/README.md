@@ -1,7 +1,7 @@
 ### Assignment 3
 ### Brandon Ngo 010646012
 
-Redid assignment 2
+Redid assignment 2 before preceeding
 ## Questions
 
 #### For each member in your team, provide 1 paragraph detailing what parts of the lab that member implemented / researched. (You may skip this question if you are doing the lab by yourself).

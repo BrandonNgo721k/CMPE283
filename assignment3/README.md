@@ -16,6 +16,8 @@ SELF
 ### Setup
   1. Use same environment as assignment 2
 
-### 
-### 
+### Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+
+### Of the exit types defined in the SDM, which are the most frequent? Least?
+ 
 ### 

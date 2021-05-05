@@ -62,4 +62,6 @@ The number of exits seem to increase at a stable rate if the test is ran every s
 ### Or are there more exits performed during certain VM operations? 
 There may be other exit and operations performed like EPT_VIOLATION, RDRAND, I/O instruction, RDTSCP , MSR_WRITE or page fault. There are more exits performed when other apps or tasks are running as well
 ### Approximately how many exits does a full VM boot entail?
-A full boot seems to be around 500,000 exits. 
+A full boot seems to be around 600,000 exits. 
+![image](https://user-images.githubusercontent.com/23691164/117208258-c4eee180-ada9-11eb-80bc-75a44e10406a.png)
+

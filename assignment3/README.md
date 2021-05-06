@@ -36,7 +36,7 @@ The most frequent:
 
 The six most common exits make sense. 
 
-The least frequent were the rest in general, most had 0 exits
+The least frequent were the rest in general, most had 0 exits but the numbers can go up depending on CPU and extra apps and process that run later on
 ![image](https://user-images.githubusercontent.com/23691164/117243741-a52cdd00-adec-11eb-80d6-288a23168be6.png)
 
 ![image](https://user-images.githubusercontent.com/23691164/117243645-7e6ea680-adec-11eb-8971-33a86b06e8f4.png)

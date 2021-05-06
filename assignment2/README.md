@@ -53,7 +53,7 @@ SELF
 
   22. install cpuid and make
   > sudo apt-get install make cpuid gcc
-  23. Tested the code using "cpuid -l 0x4FFFFFF" in terminal
+  23. Tested the code using "cpuid -l 0x4FFFFFFF" in terminal
   24. compile and run test code "gcc test.c" "./.a.out"
   -   eax =number of exits :  ebx =total cycle count of hi bit value: ecx =total cycle count of low bit value
 

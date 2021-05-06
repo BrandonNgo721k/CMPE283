@@ -34,6 +34,8 @@ The most frequent:
 -  Exit 124 0x7c: eax=0x00087059   (MSR)
 -  Exit 1024 0x400: eax=0x00014db9 (NPF)
 
+The six most common exits make sense. 
+
 The least frequent were the rest in general, most had 0 exits
 ![image](https://user-images.githubusercontent.com/23691164/117243741-a52cdd00-adec-11eb-80d6-288a23168be6.png)
 

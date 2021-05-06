@@ -38,7 +38,7 @@ SELF
   ### Code
   13. Modify the linux/arch/x86/kvm/cpuid.c 
     - Under knvm_emulate_cpuid() inserted a condition for eax==0x4FFFFFF and implemented parsing for the reg values to be printed in kernel based on atomic variables
-  14. Modify linux/arch/x86/kvm/vmx/vmx.c code to support the additional functions
+  14. Modify linux/arch/x86/kvm/kvm/kvm.c code to support the additional functions
     - added atomic variables and under the __vmx_handle_exit() add counters and time tracking
   15. Remake the code using the previous make commands and reboot
   ### Nested VM
@@ -53,7 +53,7 @@ SELF
 
   22. install cpuid and make
   > sudo apt-get install make cpuid gcc
-  23. Tested the code using "cpuid -l 0x4FFFFFF" in terminal
+  23. Tested the code using "cpuid -l 0x4FFFFFFF" in terminal
   24. compile and run test code "gcc test.c" "./.a.out"
   -   eax =number of exits :  ebx =total cycle count of hi bit value: ecx =total cycle count of low bit value
 

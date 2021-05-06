@@ -20,8 +20,21 @@ SELF
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?!
 The number of exits seem to increase at a stable rate if the test is ran every second when the nested VM is on idle. However when a browser or another process is executed, the exits jump up and do not increase at a stable rate. A full boot for my nested VM is about 570k after logging in and running the test program.
+
 [image](https://user-images.githubusercontent.com/23691164/117241951-17032780-ade9-11eb-98bf-83264f0b7de1.png)
 
 ### Of the exit types defined in the SDM, which are the most frequent? Least?
+The most frequent:
+-  Exit 96 0x60: eax=0x00014b6f
+-  Exit 114 0x72: eax=0x000236eb
+-  Exit 120 0x78: eax=0x0002bbb8
+-  Exit 123 0x7b: eax=0x0002afab
+-  Exit 124 0x7c: eax=0x00087059
+-  Exit 1024 0x400: eax=0x00014db9
 
- 
+The least frequent were the rest in general, most had 0 exits
+![image](https://user-images.githubusercontent.com/23691164/117243741-a52cdd00-adec-11eb-80d6-288a23168be6.png)
+
+![image](https://user-images.githubusercontent.com/23691164/117243645-7e6ea680-adec-11eb-8971-33a86b06e8f4.png)
+
+

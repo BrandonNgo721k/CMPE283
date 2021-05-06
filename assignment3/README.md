@@ -19,6 +19,7 @@ SELF
   3. In linux/arch/x86/kvm/svm/svm.c added an atomic exit array in line the the svm exit code and supported. 
   4. In linux/arch/x86/kvm/cpuid.c Added conditional eax=0x4ffffffe to cpuid and extracted counter from exit array
   5. Ran shell script plus 1024-1027 manually with "cpuid -l 0x4FFFFFFE -1 -s $i"
+  Run "virsh net-autostart default" if the virt-manager is throwing errors for NAT
 
 ### Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?!
 The number of exits seem to increase at a stable rate if the test is ran every second when the nested VM is on idle. However when a browser or another process is executed, the exits jump up and do not increase at a stable rate. A full boot for my nested VM is about 570k after logging in and running the test program.

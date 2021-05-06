@@ -42,6 +42,12 @@ The least frequent were the rest in general, most had 0 exits but the numbers ca
 
 ![image](https://user-images.githubusercontent.com/23691164/117333735-1486e900-ae4e-11eb-9559-c67faceb6fbb.png)![image](https://user-images.githubusercontent.com/23691164/117333799-27012280-ae4e-11eb-9adb-9fdac0dc5aa4.png)
 
+![image](https://user-images.githubusercontent.com/23691164/117338025-f1126d00-ae52-11eb-8b44-c08644dadbc4.png)
+
+![image](https://user-images.githubusercontent.com/23691164/117338055-f8d21180-ae52-11eb-9963-059905d2b1cc.png)
+
+
+
 
 
 

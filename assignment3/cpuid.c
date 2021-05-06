@@ -1204,13 +1204,12 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	else if (eax == 0x4ffffffe)
 	{
 		printk(KERN_INFO "EAX (0x4FFFFFFE)\n");
-		printk(KERN_INFO "ECX: %u\n", ecx);
 		if ((ecx >= 0 && ecx < 0xA5) || (ecx > 0x3FF && ecx < 0x404))
 		{
 			if (ecx == 0|| ecx == 3|| ecx == 4|| ecx == 8||ecx == 16||ecx == 19||ecx == 20||ecx == 24||(ecx >= 32 && ecx <=39)||(ecx >= 48 && ecx <=55)||ecx == 65||ecx ==67||ecx ==70||ecx ==77||ecx ==78||ecx ==81||ecx ==82||(ecx >= 96 && ecx <=101)||ecx ==111||(ecx >=114&&ecx <=116)||(ecx >= 118 && ecx <=125)||(ecx >= 127 && ecx <=133)||(ecx >= 137 && ecx <=139)||(ecx >= 141 && ecx <=144)||ecx==148||ecx==152||ecx==162||(ecx >= 1024 && ecx <=1027))
 			{
 				eax = atomic_read(&exit_array[ecx]);
-				printk(KERN_INFO "Valid Exit Code: %u, Exit Count: %u\n",ecx,eax);
+				printk(KERN_INFO "Valid ECX Exit Code: %u, Exit Count: %u\n",ecx,eax);
 			}
 			else
 			{

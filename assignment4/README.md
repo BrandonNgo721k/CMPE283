@@ -2,12 +2,14 @@
 
 #### Brandon Ngo
 
-Your assignment is to modify the CPUID emulation code in KVM to report back additional information
-when special CPUID leaf nodes are requested.
-•
-For CPUID leaf node %eax=0x4FFFFFFE:
-◦ Return the number of exits for the exit number provided (on input) in %ecx
-▪ This value should be returned in %eax
+Remove the ‘kvm-amd’ module from your running kernel:
+◦ rmmod kvm-intel
+5. Reload the kvm-amd module with the parameter ept=0 (this will disable nested paging and force
+KVM to use shadow paging instead)
+◦ The module you want is usually found in /lib/modules/XXX/kernel/arch/x86/kvm , where
+XXX is the version of the kernel you build for assignment 3 – don’t make a mistake and
+use the one that came with the stock Linux installation.
+◦ insmod /lib/modules/XXX/kernel/arch/x86/kvm/kvm-intel.ko ept=0
 
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented / researched. (You may skip this question if you are doing the lab by yourself).

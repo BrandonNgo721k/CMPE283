@@ -26,11 +26,11 @@ The number of exits seem to increase at a stable rate if the test is ran every s
 
 ### Of the exit types defined in the SDM, which are the most frequent? Least?
 The most frequent:
--  Exit 96 0x60: eax=0x00014b6f (INTERRUPT)
--  Exit 114 0x72: eax=0x000236eb (CPUID)
--  Exit 120 0x78: eax=0x0002bbb8 (HLT)
--  Exit 123 0x7b: eax=0x0002afab (IOIO)
--  Exit 124 0x7c: eax=0x00087059 (MSR)
+-  Exit 96 0x60: eax=0x00014b6f    (INTERRUPT)
+-  Exit 114 0x72: eax=0x000236eb   (CPUID)
+-  Exit 120 0x78: eax=0x0002bbb8   (HLT)
+-  Exit 123 0x7b: eax=0x0002afab   (IOIO)
+-  Exit 124 0x7c: eax=0x00087059   (MSR)
 -  Exit 1024 0x400: eax=0x00014db9 (NPF)
 
 The least frequent were the rest in general, most had 0 exits
